@@ -1,0 +1,2 @@
+web: java -Dserver.port=8080 -jar target/discoverAR-1.0-SNAPSHOT.jar
+web-debug: java -Dserver.port=8080 -jar target/discoverAR-1.0-SNAPSHOT.jar -Dagentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8080

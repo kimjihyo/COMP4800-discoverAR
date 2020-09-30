@@ -1,0 +1,9 @@
+.div--about {
+    width: 80%;
+    margin: 100px auto;
+}
+
+.div--about_title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

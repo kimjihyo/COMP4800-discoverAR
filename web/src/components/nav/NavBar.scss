@@ -1,0 +1,43 @@
+.nav__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: black;
+    height: auto;
+    padding: 0;
+    color: white;
+
+    ul  {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        float: left;
+
+        :hover {
+            background-color: darkgray;
+            cursor: pointer;
+        }
+
+        & > a {
+            padding: 0.5em;
+            display: block;
+            text-decoration: none;
+            color: white;
+
+            :visited :active :hover {
+                color: white;
+            }
+        }
+
+        & > p {
+            padding: 0.5em;
+            display: block;
+            text-decoration: none;
+            color: white;
+        }
+    }
+}
+
