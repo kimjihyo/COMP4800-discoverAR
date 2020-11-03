@@ -2,11 +2,13 @@ package com.example.discoverar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
+
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -23,12 +25,22 @@ public class LoginActivity extends AppCompatActivity {
 
     EditText usernameOrEmailET;
     EditText passwordET;
+    TextView signUpButton;
     Button loginBTN;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        signUpButton = (TextView) findViewById(R.id.login_screen_sign_up_button);
+
+        signUpButton.setOnClickListener(new TextView.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this, AccountCreationActivity.class));
+            }
+        });
         usernameOrEmailET = findViewById(R.id.usernameOrEmailID);
         passwordET = findViewById(R.id.passwordID);
         loginBTN = findViewById(R.id.login_screen_login_button);
@@ -60,13 +72,16 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(JSONObject response) {
                         // HANDLE RESPONSE HERE!!!-------------------------------------------------
+
                         System.out.println(response.toString());
                     }
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 // ERROR HANDLING HERE!!!----------------------------------------------------------
+                System.out.println("Failed");
                 System.out.println(R.string.invalid_auth);
+                System.out.println(error.getMessage());
             }
         });
         queue.add(stringRequest);
