@@ -9,7 +9,9 @@
 
     <string name="sign_up_screen_first_name">First Name</string>
     <string name="sign_up_screen_last_name">Last Name</string>
-    <string name="sign_up_screen_email_address">Email Address</string>
+    <string name="sign_up_screen_email_address">Username or Email Address</string>
     <string name="sign_up_screen_password">Password</string>
     <string name="sign_up_screen_re_enter_password">Re-enter password</string>
+
+    <string name="invalid_auth">Invalid Username/Email or Password</string>
 </resources>
