@@ -1,4 +1,4 @@
-package com.example.discoverar.ui.dashboard;
+package com.example.discoverar.ui.scan;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,21 +10,21 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModelProviders;
 
 import com.example.discoverar.R;
 
-public class DashboardFragment extends Fragment {
+public class ScanFragment extends Fragment {
 
-    private DashboardViewModel dashboardViewModel;
+    private ScanViewModel scanViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        dashboardViewModel =
-                new ViewModelProvider(this).get(DashboardViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_dashboard, container, false);
-        final TextView textView = root.findViewById(R.id.text_dashboard);
-        dashboardViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        scanViewModel =
+                ViewModelProviders.of(this).get(ScanViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_scan, container, false);
+        final TextView textView = root.findViewById(R.id.text_scan);
+        scanViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

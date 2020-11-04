@@ -3,23 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_Library">
 
     <fragment
-        android:id="@+id/navigation_home"
+        android:id="@+id/navigation_Library"
         android:name="com.example.discoverar.ui.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:label="@string/title_library"
+        tools:layout="@layout/fragment_library" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.discoverar.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_Journey"
+        android:name="com.example.discoverar.ui.journey.JourneyFragment"
+        android:label="@string/title_Journey"
+        tools:layout="@layout/fragment_journey" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.discoverar.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_scan"
+        android:name="com.example.discoverar.ui.scan.ScanFragment"
+        android:label="@string/title_Scan"
+        tools:layout="@layout/fragment_scan" />
 </navigation>
