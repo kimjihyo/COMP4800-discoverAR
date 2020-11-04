@@ -32,12 +32,15 @@ export const PopupIconList = ({activeKey, dispatch}) => [
     {
         type: "ADD_IMAGE",
         description: "Add Image",
-        onClick: () => dispatch({
-            type: "ADD_IMAGE",
-            x: 200,
-            y: 200,
-            key: activeKey
-        })
+        onClick: () => {
+            console.log(activeKey);
+            dispatch({
+              type: "ADD_IMAGE",
+              x: 200,
+              y: 200,
+              key: activeKey,
+            });
+        }
     }
 ]
 

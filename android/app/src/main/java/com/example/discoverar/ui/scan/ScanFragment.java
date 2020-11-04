@@ -1,4 +1,4 @@
-package com.example.discoverar.ui.notifications;
+package com.example.discoverar.ui.scan;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.discoverar.R;
 
-public class NotificationsFragment extends Fragment {
+public class ScanFragment extends Fragment {
 
-    private NotificationsViewModel notificationsViewModel;
+    private ScanViewModel scanViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        notificationsViewModel =
-                ViewModelProviders.of(this).get(NotificationsViewModel.class);
+        scanViewModel =
+                ViewModelProviders.of(this).get(ScanViewModel.class);
         View root = inflater.inflate(R.layout.fragment_scan, container, false);
         final TextView textView = root.findViewById(R.id.text_scan);
-        notificationsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        scanViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

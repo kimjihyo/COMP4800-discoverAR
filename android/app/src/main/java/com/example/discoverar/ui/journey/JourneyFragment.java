@@ -1,4 +1,4 @@
-package com.example.discoverar.ui.dashboard;
+package com.example.discoverar.ui.journey;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.discoverar.R;
 
-public class DashboardFragment extends Fragment {
+public class JourneyFragment extends Fragment {
 
-    private DashboardViewModel dashboardViewModel;
+    private JourneyViewModel journeyViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        dashboardViewModel =
-                ViewModelProviders.of(this).get(DashboardViewModel.class);
+        journeyViewModel =
+                ViewModelProviders.of(this).get(JourneyViewModel.class);
         View root = inflater.inflate(R.layout.fragment_journey, container, false);
         final TextView textView = root.findViewById(R.id.text_journey);
-        dashboardViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        journeyViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
