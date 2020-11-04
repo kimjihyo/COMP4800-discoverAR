@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -22,6 +23,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class LoginActivity extends AppCompatActivity {
+
+    private final String TAG = "LoginActivity";
 
     EditText usernameOrEmailET;
     EditText passwordET;
@@ -60,6 +63,10 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
+    private void navigateToHomeActivity() {
+        startActivity(new Intent(LoginActivity.this, ScanActivity.class));
+    }
+
     private void login(String usernameOrEmail, String password) throws JSONException {
         RequestQueue queue = Volley.newRequestQueue(this);
         String url = "https://discover-ar-dev.herokuapp.com/api/auth/signin";
@@ -71,9 +78,15 @@ public class LoginActivity extends AppCompatActivity {
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-                        // HANDLE RESPONSE HERE!!!-------------------------------------------------
-
-                        System.out.println(response.toString());
+                        try {
+                            String authToken = response.getString("accessToken");
+                            Log.d(TAG, "onResponse: " + authToken);
+                            LocalStorageManager.save(LoginActivity.this, LocalStorageManager.AUTH_TOKEN, authToken);
+                            navigateToHomeActivity();
+                        } catch (JSONException e) {
+                            Log.d(TAG, "onResponse: accessToken not found");
+                            e.printStackTrace();
+                        }
                     }
                 }, new Response.ErrorListener() {
             @Override
