@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_Library">
+
+    <fragment
+        android:id="@+id/navigation_Library"
+        android:name="com.example.discoverar.ui.home.HomeFragment"
+        android:label="@string/title_library"
+        tools:layout="@layout/fragment_library" />
+
+    <fragment
+        android:id="@+id/navigation_Journey"
+        android:name="com.example.discoverar.ui.dashboard.DashboardFragment"
+        android:label="@string/title_Journey"
+        tools:layout="@layout/fragment_journey" />
+
+    <fragment
+        android:id="@+id/navigation_scan"
+        android:name="com.example.discoverar.ui.notifications.NotificationsFragment"
+        android:label="@string/title_Scan"
+        tools:layout="@layout/fragment_scan" />
+
+</navigation>

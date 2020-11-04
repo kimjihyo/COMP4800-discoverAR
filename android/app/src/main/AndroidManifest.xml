@@ -9,10 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-<!--        <activity android:name=".LoginActivity"></activity>-->
-        <activity android:name=".AccountCreationActivity">
+<!--        <activity-->
+<!--            android:name=".ScanActivity"-->
+<!--            android:label="@string/title_activity_scan"></activity>-->
+<!--        &lt;!&ndash; <activity android:name=".LoginActivity"></activity> &ndash;&gt;-->
+        <activity android:name=".ScanActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

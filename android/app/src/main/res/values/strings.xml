@@ -12,4 +12,8 @@
     <string name="sign_up_screen_email_address">Email Address</string>
     <string name="sign_up_screen_password">Password</string>
     <string name="sign_up_screen_re_enter_password">Re-enter password</string>
+    <string name="title_activity_scan">MainActivity</string>
+    <string name="title_library">Library</string>
+    <string name="title_Journey">Journey</string>
+    <string name="title_Scan">Scan</string>
 </resources>
