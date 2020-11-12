@@ -3,6 +3,7 @@ package com.example.discoverar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -92,6 +93,9 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 // ERROR HANDLING HERE!!!----------------------------------------------------------
+                TextView loginError = findViewById(R.id.login_error_message);
+                loginError.setTextColor(Color.parseColor("#FF0000"));
+                loginError.setVisibility(View.VISIBLE);
                 System.out.println("Failed");
                 System.out.println(R.string.invalid_auth);
                 System.out.println(error.getMessage());

@@ -89,4 +89,13 @@
                 android:textStyle="bold"/>
         </LinearLayout>
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/login_error_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        android:text="@string/invalid_auth" />
+
 </LinearLayout>
