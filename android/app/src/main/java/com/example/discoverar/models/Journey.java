@@ -5,7 +5,9 @@ public class Journey {
     private String updatedAt;
     private int id;
     private String title;
+    private String description;
     private Discovery[] discoveries;
+    private String[] images;
 
     public int getId() {
         return id;
@@ -39,6 +41,11 @@ public class Journey {
         title = newTitle;
     }
 
+    public String getDescription() {
+        return description;
+    }
+    public void setDescription(String description) { this.description = description; }
+
     public Discovery[] getDiscoveries() {
         return discoveries;
     }
@@ -46,4 +53,9 @@ public class Journey {
     public void setDiscoveries(Discovery[] newDiscoveries) {
         discoveries = newDiscoveries;
     }
+
+    public String[] getImages() {
+        return images;
+    }
+    public void setImages(String[] images) { this.images = images; }
 }

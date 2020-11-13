@@ -71,12 +71,13 @@ public class HomeFragment extends Fragment {
 
                     LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
                     rv.setLayoutManager(linearLayoutManager);
-                    journeyAdapter = new JourneyAdapter(journeys);
+                    journeyAdapter = new JourneyAdapter(journeys, getActivity());
                     rv.setAdapter(journeyAdapter);
 
 
                     for (Journey journey : journeys) {
                         Log.d(TAG, "onCompletion: " + journey.getTitle());
+                        Log.d(TAG, "description: " + journey.getDescription());
                     }
                 }
             });

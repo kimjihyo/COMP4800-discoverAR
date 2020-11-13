@@ -19,6 +19,8 @@ import androidx.navigation.ui.NavigationUI;
 
 public class ScanActivity extends AppCompatActivity {
 
+    private String[] currentImageArr;
+
     private final String TAG = "ScanActivity";
 
     @Override
@@ -66,6 +68,9 @@ public class ScanActivity extends AppCompatActivity {
 //        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
 //        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
 //        NavigationUI.setupWithNavController(navView, navController);
+        currentImageArr = new String[0];
     }
+    public void setCurrentImageArr(String[] currentImageArr) { this.currentImageArr = currentImageArr; }
+    public String[] getCurrentImageArr() { return this.currentImageArr; }
 
 }
