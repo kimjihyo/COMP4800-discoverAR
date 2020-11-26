@@ -7,6 +7,7 @@ import android.view.MenuItem;
 import com.example.discoverar.ui.home.HomeFragment;
 import com.example.discoverar.ui.journey.JourneyFragment;
 import com.example.discoverar.ui.scan.ScanFragment;
+import com.example.discoverar.ui.settings.SettingsFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.annotation.NonNull;
@@ -37,7 +38,6 @@ public class ScanActivity extends AppCompatActivity {
                     case R.id.navigation_Library:
                         Log.d(TAG, "onNavigationItemSelected: navigation library");
                         selectedFragment = new HomeFragment();
-                        // selectedFragment = new
                         break;
                     case R.id.navigation_Journey:
                         Log.d(TAG, "onNavigationItemSelected: navigation journey");
@@ -47,13 +47,19 @@ public class ScanActivity extends AppCompatActivity {
                         Log.d(TAG, "onNavigationItemSelected: navigation scan");
                         selectedFragment = new ScanFragment();
                        break;
+                    case R.id.navigation_settings:
+                        Log.d(TAG, "onNavigationItemSelected: navigation settings");
+                        selectedFragment = new SettingsFragment();
+                        break;
                 }
+
                 if (selectedFragment != null) {
                     getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment, selectedFragment).commit();
                     return true;
                 } else {
                     return false;
                 }
+
             }
         });
 //        // Passing each menu ID as a set of Ids because each
