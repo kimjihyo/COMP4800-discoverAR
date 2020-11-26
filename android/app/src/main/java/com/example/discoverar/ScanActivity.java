@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.MenuItem;
 
 import com.example.discoverar.models.Discovery;
+import com.example.discoverar.models.Journey;
 import com.example.discoverar.ui.home.HomeFragment;
 import com.example.discoverar.ui.journey.JourneyFragment;
 import com.example.discoverar.ui.scan.ScanFragment;
@@ -23,6 +24,7 @@ public class ScanActivity extends AppCompatActivity {
 
     private String[] currentImageArr;
     private Discovery[] currentDiscoveries;
+    private Journey currentJourney;
 
     private final String TAG = "ScanActivity";
 
@@ -79,6 +81,9 @@ public class ScanActivity extends AppCompatActivity {
         currentImageArr = new String[0];
         currentDiscoveries = new Discovery[0];
     }
+    public void setCurrentJourney(Journey journey) { this.currentJourney = journey; }
+    public Journey getCurrentJourney() { return this.currentJourney; }
+
     public void setCurrentImageArr(String[] currentImageArr) { this.currentImageArr = currentImageArr; }
     public String[] getCurrentImageArr() { return this.currentImageArr; }
 

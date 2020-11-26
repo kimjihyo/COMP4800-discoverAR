@@ -14,6 +14,7 @@ import com.example.discoverar.MainActivity;
 import com.example.discoverar.R;
 import com.example.discoverar.ScanActivity;
 import com.example.discoverar.models.Journey;
+import com.example.discoverar.ui.journey.JourneyFragment;
 
 import java.util.ArrayList;
 
@@ -42,10 +43,11 @@ public class JourneyAdapter extends RecyclerView.Adapter<JourneyAdapter.JourneyV
             @Override
             public void onClick(View v) {
                 if (context instanceof ScanActivity) {
-                    // get journeys
+                    // get journey images
                     ((ScanActivity)context).setCurrentImageArr(journeys.get(position).getImages());
                     // get discoveries
                     ((ScanActivity)context).setCurrentDiscoveries(journeys.get(position).getDiscoveries());
+                    ((ScanActivity)context).setCurrentJourney(journeys.get(position));
                 }
                 Toast.makeText(context,"Journey " + journeys.get(position).getTitle() + " set",
                         Toast.LENGTH_SHORT).show();

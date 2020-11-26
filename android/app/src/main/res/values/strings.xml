@@ -19,6 +19,9 @@
 <string name="title_Scan">Scan</string>
 <string name="title_Settings">Settings</string>
 
+<string name="noJourney">No Journey Selected</string>
+<string name="journey_image_label">Image to track:</string>
+
 <string name="settings_sign_out_button">Sign Out</string>
 
 <string name="invalid_auth">Invalid Username/Email or Password</string>
