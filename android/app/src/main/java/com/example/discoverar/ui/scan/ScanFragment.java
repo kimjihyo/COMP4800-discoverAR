@@ -24,15 +24,14 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.RequestManager;
-import com.example.discoverar.MainActivity;
 import com.example.discoverar.ScanActivity;
 import com.example.discoverar.common.helpers.CameraPermissionHelper;
 import com.example.discoverar.common.helpers.DisplayRotationHelper;
-import com.example.discoverar.common.helpers.FullScreenHelper;
 import com.example.discoverar.common.helpers.SnackbarHelper;
 import com.example.discoverar.common.helpers.TrackingStateHelper;
 import com.example.discoverar.common.rendering.BackgroundRenderer;
-import com.example.discoverar.rendering.DiscoveryImageRenderer;
+import com.example.discoverar.rendering.AugmentedImageRenderer;
+import com.example.discoverar.rendering.shapes.GLTriangle;
 import com.google.ar.core.Anchor;
 import com.google.ar.core.ArCoreApk;
 import com.google.ar.core.AugmentedImage;
@@ -50,12 +49,10 @@ import com.google.ar.core.exceptions.UnavailableSdkTooOldException;
 import com.google.ar.core.exceptions.UnavailableUserDeclinedInstallationException;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
@@ -79,7 +76,7 @@ public class ScanFragment extends Fragment implements GLSurfaceView.Renderer {
     private TrackingStateHelper trackingStateHelper;
 
     private final BackgroundRenderer backgroundRenderer = new BackgroundRenderer();
-    private final DiscoveryImageRenderer discoveryImageRenderer = new DiscoveryImageRenderer();
+    private final AugmentedImageRenderer augmentedImageRenderer = new AugmentedImageRenderer();
 
     private boolean shouldConfigureSession = false;
 
@@ -241,7 +238,7 @@ public class ScanFragment extends Fragment implements GLSurfaceView.Renderer {
         try {
             // Create the texture and pass it to ARCore session to be filled during update().
             backgroundRenderer.createOnGlThread(this.getContext());
-            discoveryImageRenderer.createOnGlThread(this.getContext());
+            augmentedImageRenderer.createOnGlThread(this.getContext());
         } catch (IOException e) {
             Log.e(TAG, "Failed to read an asset file", e);
         }
@@ -311,8 +308,7 @@ public class ScanFragment extends Fragment implements GLSurfaceView.Renderer {
 
     private void drawAugmentedImages(
             Frame frame, float[] projmtx, float[] viewmtx, float[] colorCorrectionRgba) {
-        Collection<AugmentedImage> updatedAugmentedImages =
-                frame.getUpdatedTrackables(AugmentedImage.class);
+        Collection<AugmentedImage> updatedAugmentedImages = frame.getUpdatedTrackables(AugmentedImage.class);
 
         // Iterate to update augmentedImageMap, remove elements we cannot draw.
         for (AugmentedImage augmentedImage : updatedAugmentedImages) {
@@ -357,8 +353,8 @@ public class ScanFragment extends Fragment implements GLSurfaceView.Renderer {
             Anchor centerAnchor = augmentedImageMap.get(augmentedImage.getIndex()).second;
             switch (augmentedImage.getTrackingState()) {
                 case TRACKING:
-                    discoveryImageRenderer.draw(
-                            viewmtx, projmtx, augmentedImage, centerAnchor, colorCorrectionRgba);
+                    System.out.println("--------------------------TRACKING-----------------");
+                    augmentedImageRenderer.draw(viewmtx, projmtx, augmentedImage, centerAnchor, colorCorrectionRgba);
                     break;
                 default:
                     break;

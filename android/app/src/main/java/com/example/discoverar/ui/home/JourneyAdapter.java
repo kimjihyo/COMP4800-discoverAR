@@ -42,7 +42,10 @@ public class JourneyAdapter extends RecyclerView.Adapter<JourneyAdapter.JourneyV
             @Override
             public void onClick(View v) {
                 if (context instanceof ScanActivity) {
+                    // get journeys
                     ((ScanActivity)context).setCurrentImageArr(journeys.get(position).getImages());
+                    // get discoveries
+                    ((ScanActivity)context).setCurrentDiscoveries(journeys.get(position).getDiscoveries());
                 }
                 Toast.makeText(context,"Journey " + journeys.get(position).getTitle() + " set",
                         Toast.LENGTH_SHORT).show();

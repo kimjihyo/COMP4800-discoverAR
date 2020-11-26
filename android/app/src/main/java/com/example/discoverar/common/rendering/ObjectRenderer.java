@@ -307,13 +307,15 @@ public class ObjectRenderer {
    * @param scaleFactor A separate scaling factor to apply before the {@code modelMatrix}.
    * @see Matrix
    */
-  public void updateModelMatrix(float[] modelMatrix, float scaleFactor) {
+  public void updateModelMatrix(float[] modelMatrix, float scaleFactor, float rotationAngle) {
     float[] scaleMatrix = new float[16];
     Matrix.setIdentityM(scaleMatrix, 0);
     scaleMatrix[0] = scaleFactor;
     scaleMatrix[5] = scaleFactor;
     scaleMatrix[10] = scaleFactor;
     Matrix.multiplyMM(this.modelMatrix, 0, modelMatrix, 0, scaleMatrix, 0);
+    Matrix.rotateM(this.modelMatrix, 0, rotationAngle, 1f, 0f, 0f);
+    Matrix.translateM(this.modelMatrix, 0, 0f, 0f, -0.5f);
   }
 
   /**
