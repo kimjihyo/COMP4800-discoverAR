@@ -31,7 +31,6 @@ import com.example.discoverar.common.helpers.SnackbarHelper;
 import com.example.discoverar.common.helpers.TrackingStateHelper;
 import com.example.discoverar.common.rendering.BackgroundRenderer;
 import com.example.discoverar.rendering.AugmentedImageRenderer;
-import com.example.discoverar.rendering.shapes.GLTriangle;
 import com.google.ar.core.Anchor;
 import com.google.ar.core.ArCoreApk;
 import com.google.ar.core.AugmentedImage;
