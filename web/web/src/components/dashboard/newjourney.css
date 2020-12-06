@@ -1,0 +1,97 @@
+#newJourneyContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 512px;
+    margin: 0 auto;
+    background-color: skyblue;
+    border-radius: 12px;
+    box-shadow: 0 0 2pt red;
+
+}
+
+#newJourneyContainer div {
+    padding: 1em;
+}
+
+input{
+    width: 50%;
+}
+#preview {
+    height: 64px;
+    width: 64px;
+}
+
+textarea {
+    width: 50%;
+    height: 150px;
+    resize: none;
+}
+.create-journey-button{
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 16pt;
+    padding: 8px;
+    width: 100px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.create-journey-button{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+.create-journey-button span:after {
+    content: '#00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+.create-journey-button:hover span{
+    padding-right: 10px;
+}
+.create-journey-button:hover span:after{
+    opacity: 1;
+   right: 1;
+}
+
+.closeTab{
+    display: inline-block;
+  padding: 8px 12px;
+  font-size: 16pt;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 4px #999;
+}
+
+.closeTab:hover {
+    background-color: blue
+}
+
+.closeTab:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+/* button:hover {
+    background-color: #f44336;
+    color: white;
+    cursor: pointer;
+} */

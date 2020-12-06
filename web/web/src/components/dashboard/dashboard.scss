@@ -1,0 +1,31 @@
+
+.grid-container {
+    padding: 20px;
+    max-width: 100%;
+}
+
+.fab-container {
+    margin: 0px;
+    right: 20px;
+    bottom: 20px;
+    position: fixed;
+    
+}
+
+.title-container {
+    padding: 20px;
+}
+
+#overlay {
+    position: fixed;
+    width: 100%;
+    right: calc(50% - 256);
+    bottom: 25%;
+    text-align: center;
+    display: none;
+}
+
+// #create-journey-button:hover {
+//     color: #ffffff94;
+//     cursor: pointer;
+// }
