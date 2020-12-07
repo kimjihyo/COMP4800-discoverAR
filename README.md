@@ -20,18 +20,18 @@ Current Features
 
 Prerequisites
 -
-###Android Application###
-* Build with Android Studio v4.0.1 
+* Android Application
+	* Build with Android Studio v4.0.1 
 
-###Web Application###
-* React.js
-	* Hook, class-based components, reducers, destructuring objects
-* Node.js
-	* Downloading, Instaling, and Removing packages
-* Git
-	* Working off from branches, dealing with conflicts in pull requests, rebasing
-* JSON Web Token
-	* Reading and Creating tokens
+* Web Application
+	* React.js
+		* Hook, class-based components, reducers, destructuring objects
+	* Node.js
+		* Downloading, Instaling, and Removing packages
+	* Git
+		* Working off from branches, dealing with conflicts in pull requests, rebasing
+	* JSON Web Token
+		* Reading and Creating tokens
 	
 **Future Feature/ToDo List**
 -
