@@ -8,10 +8,12 @@
 **Prerequisites**
 -
 
+**Future Feature/ToDo List**
+-
+
 **Client**<br />
 -
  Geographic Information Systems Department in British Columbia Institute of Technology
-	 	- [Website](https://www.bcit.ca/programs/geographic-information-systems/)
 	
 **Developer Team** <br />
 -
