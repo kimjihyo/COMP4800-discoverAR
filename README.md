@@ -27,7 +27,7 @@ The augmented reality app HP Reveal, which could be used for creating interactiv
 * React.js
 	* Hook, class-based components, reducers, destructuring objects
 * Node.js
-	* Downloading, instaling, and removing packages
+	* Downloading, Instaling, and Removing packages
 * Git
 	* Working off from branches, dealing with conflicts in pull requests, rebasing
 * JSON Web Token
