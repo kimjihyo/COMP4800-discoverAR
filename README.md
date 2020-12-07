@@ -6,8 +6,9 @@
 
 **Client**
 -
-Geographic Information Systems Department in British Columbia Institute of Technology
+ Geographic Information Systems Department in British Columbia Institute of Technology
 	- [Website](https://www.bcit.ca/programs/geographic-information-systems/)
+	
 **Developer Team** <br />
 -
  BCIT COMP 4800 Practicum 2 - Team 10
