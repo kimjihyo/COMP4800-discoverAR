@@ -2,11 +2,10 @@
 OverView
 -
 The augmented reality app HP Reveal, which could be used for creating interactive educational material, was discontinued on April 1, 2019. The goal of this project is to replace HP Reveal by producing a free open-source application that can allow users to build interactive maps using image recognition to trigger certain actions such as revealing links, documents, videos, etc. The target audience is educators who would like to build interactive ‘maps’ for their students.
-
 Current Features
 -
 ### Editor (Web Application)
-
+[Web App](https://discover-ar-dev.herokuapp.com/)
 * Login/Signup
 * Create and edit Journeys
 * Set image to track for a journey
