@@ -1,6 +1,6 @@
 # COMP4800 discoverAR
 
-**Developer** <br />
+**Developer Team** <br />
 -
  BCIT COMP 4800 Practicum 2 - Team 10
    - Wayne Chang 
