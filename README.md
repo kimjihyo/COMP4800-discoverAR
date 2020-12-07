@@ -32,6 +32,7 @@ Web Application
 	* Working off from branches, dealing with conflicts in pull requests, rebasing
 * JSON Web Token
 	* Reading and Creating tokens
+	
 **Future Feature/ToDo List**
 -
 * Develop more in-depth pop-ups for the editor and viewer (text/images/videos/etc.)
