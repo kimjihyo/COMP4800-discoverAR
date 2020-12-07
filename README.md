@@ -5,6 +5,13 @@ The augmented reality app HP Reveal, which could be used for creating interactiv
 
 **Current Features**
 -
+## Editor (Web Application)
+
+* Login/Signup
+* Create and edit Journeys
+* Set image to track for a journey
+* Add shape pop-ups to a journey
+
 ## Viewer (Android Application)
 
 * Login/Signup
