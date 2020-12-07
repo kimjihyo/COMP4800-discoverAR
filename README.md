@@ -6,25 +6,22 @@ The augmented reality app HP Reveal, which could be used for creating interactiv
 **Current Features**
 -
 ## Editor (Webapp)
-	-Login/Signup
-	-Create and edit Journeys
-	-Set image to track for a journey
-	-Add shape pop-ups to a journey
+	
 
 ## Viewer (Android Application)
--
-	-Login/Signup
-	-View journeys and journey information
-	-Scan the image to track and view the pop-ups when the image is detected
+
+*Login/Signup
+*View journeys and journey information
+*Scan the image to track and view the pop-ups when the image is detected
 
 **Prerequisites**
 -
 
 **Future Feature/ToDo List**
 -
-	- Develop more in-depth pop-ups for the editor and viewer (text/images/videos/etc.)
-	- Develop branching between Journeys
-	- Develop geofencing capabilities for Journeys
+* Develop more in-depth pop-ups for the editor and viewer (text/images/videos/etc.)
+* Develop branching between Journeys
+* Develop geofencing capabilities for Journeys
 	
 **Developer Team** <br />
 -
