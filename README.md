@@ -20,10 +20,10 @@ The augmented reality app HP Reveal, which could be used for creating interactiv
 
 **Prerequisites**
 -
-Android Application
+***Android Application***
 * Build with Android Studio v4.0.1 
 
-Web Application
+***Web Application***
 * React.js
 	* Hook, class-based components, reducers, destructuring objects
 * Node.js
