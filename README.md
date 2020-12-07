@@ -7,7 +7,7 @@
 **Client**
 -
  Geographic Information Systems Department in British Columbia Institute of Technology
-	- [Website](https://www.bcit.ca/programs/geographic-information-systems/)
+	 	- [Website](https://www.bcit.ca/programs/geographic-information-systems/)
 	
 **Developer Team** <br />
 -
