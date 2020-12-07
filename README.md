@@ -1,8 +1,12 @@
 # COMP4800 discoverAR
 **OverView**
+-
 
 **Current Features**
+-
+
 **Prerequisites**
+-
 
 **Client**<br />
 -
