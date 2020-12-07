@@ -2,7 +2,7 @@
 
 **Developer** <br />
 -
- BCIT COMP 3800 Practicum 1 - Team 10
+ BCIT COMP 4800 Practicum 2 - Team 10
    - Wayne Chang 
    		- [Github](https://github.com/Monrch92)
 		- [Linkedin](https://www.linkedin.com/in/waynechang851/)
