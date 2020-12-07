@@ -10,9 +10,9 @@ The augmented reality app HP Reveal, which could be used for creating interactiv
 
 ## Viewer (Android Application)
 
-*Login/Signup
-*View journeys and journey information
-*Scan the image to track and view the pop-ups when the image is detected
+* Login/Signup
+* View journeys and journey information
+* Scan the image to track and view the pop-ups when the image is detected
 
 **Prerequisites**
 -
