@@ -5,9 +5,6 @@ The augmented reality app HP Reveal, which could be used for creating interactiv
 
 **Current Features**
 -
-## Editor (Webapp)
-	
-
 ## Viewer (Android Application)
 
 * Login/Signup
