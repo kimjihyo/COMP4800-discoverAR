@@ -1,4 +1,4 @@
-# COMP4800 discoverAR
+# DiscoverAR
 **OverView**
 -
 
